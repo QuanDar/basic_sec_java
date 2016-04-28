@@ -1,2 +1,7 @@
 # basic_sec_java
-basic security
+Basic security project 2016 - onderdeel app dev
+##Groepsleden
+Steven Deuss
+Merlijn Versteegen
+Vincent Ravoet
+Roy van de Wetering
