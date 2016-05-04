@@ -24,7 +24,7 @@ public class HybridCryptosystemTest {
     Properties properties;
 
     static String rawText = "John has a long mustache.";
-    static String cipherText;
+    static byte[] cipherText;
     static String encodedAESSecretKey;
     static String encryptedAESSecretKey;
 
@@ -99,7 +99,7 @@ public class HybridCryptosystemTest {
             decryptedAESPrivateKey = rsaCipher.decrypt(encryptedAESSecretKey, rsaPrivateCrtKey, "RSA/ECB/PKCS1Padding", "UTF-8");
 
             AESCipher aesCipher = new AESCipher();
-            decryptedCipherText = aesCipher.decrypt(cipherText, aesCipher.getDecodedSecretKey(decryptedAESPrivateKey));
+            decryptedCipherText = aesCipher.decryptMessage(cipherText, aesCipher.getDecodedSecretKey(decryptedAESPrivateKey));
 
         } finally {
             if (fileInputStream != null) {
