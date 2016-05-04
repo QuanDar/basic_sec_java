@@ -50,18 +50,18 @@ public class Controller {
 		/*
 		 * 
 		 * 
-		 * TODO Private RSA key code.
+		 * TODO Private RSAZelfGeschreven key code.
 		 */
-		updateLog("Private RSA key generated.");
+		updateLog("Private RSAZelfGeschreven key generated.");
 	}
 
 	public void generatePublicRSAKey() {
 		/*
 		 * 
 		 * 
-		 * TODO Public RSA key code.
+		 * TODO Public RSAZelfGeschreven key code.
 		 */
-		updateLog("Public RSA key generated.");
+		updateLog("Public RSAZelfGeschreven key generated.");
 	}
 
 	public void encryptFile(File f) {
