@@ -27,7 +27,7 @@ import java.security.spec.KeySpec;
 import java.util.Arrays;
 import java.util.Random;
 
-public class AESCipher {
+public class AES {
 
     // http://stackoverflow.com/questions/201479/what-is-base-64-encoding-used-for
     /**
@@ -68,14 +68,14 @@ public class AESCipher {
     private SecretKey secretKey;
     private Cipher cipherAES;
 
-    //private String cipherString = "AESCipher/CBC/PKCS5Padding";
+    //private String cipherString = "AES/CBC/PKCS5Padding";
 
     /** https://docs.oracle.com/javase/8/docs/api/javax/crypto/SecretKey.html
      * public interface SecretKey
      * extends Key, Destroyable
      * Secret (symmetric key)
      *
-     * Het doel van deze interface is het groeperen (en beveiligen) van alle secret key interfaces. (bijvoorbeeld AESCipher wordt geacepteerd.
+     * Het doel van deze interface is het groeperen (en beveiligen) van alle secret key interfaces. (bijvoorbeeld AES wordt geacepteerd.
      * De equals en hashCode methode inherited van Object moeten overschreven worden, zodat de
      * secret keys worden vergelijken met het onderliggen key materiaal en niet gebasseerd op reference.
      * destroy en isDestroyed methodes van Interface Destroyable moeten override worden, om de key veilig kapot te maken.
@@ -88,7 +88,7 @@ public class AESCipher {
      *
      * Een secret symmetric key generator. KeyGenerator objects zijn reusable (kan gebruikt worden om meerdere keys te maken, herbruikbaar)
      * Every implementation of the Java platform is required to support the following standard KeyGenerator algorithms with the keysizes in parentheses:
-     * AESCipher (128)
+     * AES (128)
      * DES (56)
      * DESede (168)
      * HmacSHA1
@@ -98,7 +98,7 @@ public class AESCipher {
         try {
             // getInstance(String algorithm)
             // Returns a KeyGenerator object that generates secret keys for the specified algorithm.
-            return KeyGenerator.getInstance("AESCipher").generateKey();
+            return KeyGenerator.getInstance("AES").generateKey();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
@@ -114,15 +114,15 @@ public class AESCipher {
     }
 
     public SecretKey getDecodedSecretKey(String secretKey) {
-        return new SecretKeySpec(base64.decode(secretKey), "AESCipher");
+        return new SecretKeySpec(base64.decode(secretKey), "AES");
     }
 
-    public AESCipher()
+    public AES()
             throws NoSuchAlgorithmException, NoSuchPaddingException {
         this(new Base64(), 16, 16, 16);
     }
 
-    public AESCipher(Base64 base64, int passwordLength, int saltLength, int initializationVectorSeedLength)
+    public AES(Base64 base64, int passwordLength, int saltLength, int initializationVectorSeedLength)
             throws NoSuchAlgorithmException, NoSuchPaddingException {
         /**
          *
@@ -138,10 +138,10 @@ public class AESCipher {
              *
              * Een van de volgende transformaties (beschrijving van de operatie(of set operaties)) w
              * moet meegegeven worden aan getInstance().
-             * AESCipher/CBC/NoPadding (128)
-             * AESCipher/CBC/PKCS5Padding (128)
-             * AESCipher/ECB/NoPadding (128)
-             * AESCipher/ECB/PKCS5Padding (128)
+             * AES/CBC/NoPadding (128)
+             * AES/CBC/PKCS5Padding (128)
+             * AES/ECB/NoPadding (128)
+             * AES/ECB/PKCS5Padding (128)
              * DES/CBC/NoPadding (56)
              * DES/CBC/PKCS5Padding (56)
              * DES/ECB/NoPadding (56)
@@ -154,7 +154,7 @@ public class AESCipher {
              * RSA/ECB/OAEPWithSHA-1AndMGF1Padding (1024, 2048)
              * RSA/ECB/OAEPWithSHA-256AndMGF1Padding (1024, 2048)
              */
-            cipherAES = Cipher.getInstance("AESCipher/CBC/PKCS5Padding");
+            cipherAES = Cipher.getInstance("AES/CBC/PKCS5Padding");
         } catch (NoSuchAlgorithmException noSuchAlgorithmException) {
             throw noSuchAlgorithmException;
         } catch (NoSuchPaddingException noSuchPaddingException) {
@@ -223,7 +223,7 @@ public class AESCipher {
          * https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#KeyFactory
          * In tegenstelling tot KeyFactory die op assymetric keys werkt, werkt SecretKeyFactory alleen op symmetrische keys.
          */
-        secretKey = new SecretKeySpec(secretKeyFactory.generateSecret(keySpec).getEncoded(), "AESCipher");
+        secretKey = new SecretKeySpec(secretKeyFactory.generateSecret(keySpec).getEncoded(), "AES");
 
         /**
          * https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#Cipher
@@ -313,7 +313,7 @@ public class AESCipher {
         return randomPassword;
     }
 
-    private static final String CIPHER_SPEC = "AESCipher/CBC/PKCS5Padding";
+    private static final String CIPHER_SPEC = "AES/CBC/PKCS5Padding";
 
     // Key derivation specification - changing will break existing streams!
     private static final String KEYGEN_SPEC = "PBKDF2WithHmacSHA1";
@@ -343,7 +343,7 @@ public class AESCipher {
         try {
             factory = SecretKeyFactory.getInstance(KEYGEN_SPEC);
         } catch (NoSuchAlgorithmException impossible) { return null; }
-        // derive a longer key, then split into AESCipher key and authentication key
+        // derive a longer key, then split into AES key and authentication key
         KeySpec spec = new PBEKeySpec(password, salt, ITERATIONS, keyLength + AUTH_KEY_LENGTH * 8);
         SecretKey tmp = null;
         try {
@@ -351,9 +351,9 @@ public class AESCipher {
         } catch (InvalidKeySpecException impossible) { }
         byte[] fullKey = tmp.getEncoded();
         SecretKey authKey = new SecretKeySpec( // key for password authentication
-                Arrays.copyOfRange(fullKey, 0, AUTH_KEY_LENGTH), "AESCipher");
-        SecretKey encKey = new SecretKeySpec( // key for AESCipher encryption
-                Arrays.copyOfRange(fullKey, AUTH_KEY_LENGTH, fullKey.length), "AESCipher");
+                Arrays.copyOfRange(fullKey, 0, AUTH_KEY_LENGTH), "AES");
+        SecretKey encKey = new SecretKeySpec( // key for AES encryption
+                Arrays.copyOfRange(fullKey, AUTH_KEY_LENGTH, fullKey.length), "AES");
         return new Keys(encKey, authKey);
     }
 
@@ -371,14 +371,14 @@ public class AESCipher {
     /**
      * Encrypt een stream of data. De encrypted stream heeft een header.
      * @param keyLength
-     *   key lengte voor AESCipher encryption (128, 192, 256)
+     *   key lengte voor AES encryption (128, 192, 256)
      * @param password
      *   password
      * @param input
      *   byte stream encrypted
      * @param output
      *   encrypted data stream naar een nieuwe file
-     * @throws AESCipher.StrongEncryptionNotAvailableException
+     * @throws AES.StrongEncryptionNotAvailableException
      *   strength files niet geinstalleerd.
      * @throws IOException
      */
@@ -390,13 +390,13 @@ public class AESCipher {
         byte[] salt = generateSalt(SALT_LENGTH);
         Keys keys = keygen(keyLength.getBits(), password, salt);
 
-        // initialize AESCipher encryption
+        // initialize AES encryption
         Cipher encrypt = null;
         try {
             encrypt = Cipher.getInstance(CIPHER_SPEC);
             encrypt.init(Cipher.ENCRYPT_MODE, keys.encryption);
         } catch (NoSuchAlgorithmException | NoSuchPaddingException impossible) { }
-        catch (InvalidKeyException e) { // 192 or 256-bit AESCipher not available
+        catch (InvalidKeyException e) { // 192 or 256-bit AES not available
             throw new StrongEncryptionNotAvailableException(keyLength.getBits());
         }
 
@@ -406,7 +406,7 @@ public class AESCipher {
             iv = encrypt.getParameters().getParameterSpec(IvParameterSpec.class).getIV();
         } catch (InvalidParameterSpecException impossible) { }
 
-        // write authentication and AESCipher initialization data
+        // write authentication and AES initialization data
         output.write(keyLength.getBits() / 8);
         output.write(salt);
         output.write(keys.authentication.getEncoded());
@@ -449,7 +449,7 @@ public class AESCipher {
             throw new InvalidPasswordException();
         }
 
-        // initialize AESCipher decryption
+        // initialize AES decryption
         byte[] iv = new byte[16]; // 16-byte I.V. regardless of key size
         input.read(iv);
         Cipher decrypt = null;
@@ -458,7 +458,7 @@ public class AESCipher {
             decrypt.init(Cipher.DECRYPT_MODE, keys.encryption, new IvParameterSpec(iv));
         } catch (NoSuchAlgorithmException | NoSuchPaddingException
                 | InvalidAlgorithmParameterException impossible) { }
-        catch (InvalidKeyException e) { // 192 or 256-bit AESCipher not available
+        catch (InvalidKeyException e) { // 192 or 256-bit AES not available
             throw new StrongEncryptionNotAvailableException(keyLength);
         }
 
@@ -487,7 +487,7 @@ public class AESCipher {
 
     public class StrongEncryptionNotAvailableException extends Exception {
         public StrongEncryptionNotAvailableException(int keySize) {
-            super(keySize + "-bit AESCipher encryption is niet beschikbaar op dit platform (strength files waarschijnlijk niet vervangen).");
+            super(keySize + "-bit AES encryption is niet beschikbaar op dit platform (strength files waarschijnlijk niet vervangen).");
         }
     }
 

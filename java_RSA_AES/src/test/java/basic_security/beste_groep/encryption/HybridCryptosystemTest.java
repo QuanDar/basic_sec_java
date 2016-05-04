@@ -57,8 +57,8 @@ public class HybridCryptosystemTest {
             X509Certificate x509Certificate = (X509Certificate)keyStore.getCertificate(truststoreAliasProp);
             RSAPublicKey rsaPublicKey = (RSAPublicKey)x509Certificate.getPublicKey();
 
-            AESCipher aesCipher = new AESCipher();
-            cipherText = aesCipher.encryptMessage(rawText, 1000, AESCipher.KeyLength.TWO_FIFTY_SIX);
+            AES aesCipher = new AES();
+            cipherText = aesCipher.encryptMessage(rawText, 1000, AES.KeyLength.TWO_FIFTY_SIX);
 
             RSACipher rsaCipher = new RSACipher();
             encodedAESSecretKey = aesCipher.getEncodedSecretKey(aesCipher.getSecretKey());
@@ -98,7 +98,7 @@ public class HybridCryptosystemTest {
             RSACipher rsaCipher = new RSACipher();
             decryptedAESPrivateKey = rsaCipher.decrypt(encryptedAESSecretKey, rsaPrivateCrtKey, "RSA/ECB/PKCS1Padding", "UTF-8");
 
-            AESCipher aesCipher = new AESCipher();
+            AES aesCipher = new AES();
             decryptedCipherText = aesCipher.decryptMessage(cipherText, aesCipher.getDecodedSecretKey(decryptedAESPrivateKey));
 
         } finally {
