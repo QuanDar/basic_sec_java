@@ -18,7 +18,7 @@ public class AESTest {
  *C:\Program Files\Java\jdk1.8.0_73\jre\lib\security  */
         //Download: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
 
-        AES aes = new AES();
+        AESCipher aesCipher = new AESCipher();
         char[] password = "pxl".toCharArray();
         char[] wrongPass = "pxxl".toCharArray();
         //Path path = Paths.get("image.jpg");
@@ -40,20 +40,20 @@ public class AESTest {
         FileOutputStream fos = new FileOutputStream(fileEncrypted);
 
         // 128, 192, 256 of de enum KeyLength gebruiken
-        aes.encryptFile(AES.KeyLength.TWO_FIFTY_SIX, password, fis, fos);
+        aesCipher.encryptFile(AESCipher.KeyLength.TWO_FIFTY_SIX, password, fis, fos);
 
         FileInputStream fisEncrypted = new FileInputStream(fileEncrypted);
         FileOutputStream fosDecrypted = new FileOutputStream("C:\\Users\\royXD\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\decrypted_image.jpg");
 
-         aes.decryptFile(password, fisEncrypted, fosDecrypted);
-        //keylenght = aes.decryptMessage(wrongPass, fisEncrypted, fosDecrypted);
+         aesCipher.decryptFile(password, fisEncrypted, fosDecrypted);
+        //keylenght = aesCipher.decryptMessage(wrongPass, fisEncrypted, fosDecrypted);
     }
 
     @org.junit.Test
     public void testEncryptionDecryption()
             throws Exception {
 
-        AES aesMessages = new AES();
+        AESCipher aesCipherMessages = new AESCipher();
         /** Om een key size van 256 te gebruiken heb je de Cryptography Extension (JCE) Unlimited Strength files nodig.
          * Instaleren kan door de files te replacen in:
          *C:\Program Files\Java\jre1.8.0_73\lib\security
@@ -61,8 +61,8 @@ public class AESTest {
         //Download: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
 
         // (tekst, aantal itiraties, key size)
-        byte[] encrypted = aesMessages.encryptMessage("John has a long mustache.", 1000, AES.KeyLength.TWO_FIFTY_SIX);
-        String decrypted = aesMessages.decryptMessage(encrypted, aesMessages.getSecretKey());
+        byte[] encrypted = aesCipherMessages.encryptMessage("John has a long mustache.", 1000, AESCipher.KeyLength.ONE_TWENTY_EIGHT);
+        String decrypted = aesCipherMessages.decryptMessage(encrypted, aesCipherMessages.getSecretKey());
         Assert.assertEquals(decrypted, "John has a long mustache.");
     }
 

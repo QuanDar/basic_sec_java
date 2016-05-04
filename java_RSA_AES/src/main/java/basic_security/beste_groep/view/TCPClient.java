@@ -88,12 +88,12 @@ public class TCPClient {
 		scrollPane.setBounds(10, 277, 364, 115);
 		frame.getContentPane().add(scrollPane);
 		
-		rdbtnGenerateAes = new JRadioButton("AES");
+		rdbtnGenerateAes = new JRadioButton("AESCipher");
 		rdbtnGenerateAes.setBackground(SystemColor.inactiveCaption);
 		rdbtnGenerateAes.setForeground(Color.BLACK);
 		rdbtnGenerateAes.setSelected(true);
 		rdbtnGenerateAes.setBounds(10, 32, 120, 23);
-		rdbtnGenerateAes.setActionCommand("AES");
+		rdbtnGenerateAes.setActionCommand("AESCipher");
 		frame.getContentPane().add(rdbtnGenerateAes);
 		
 		rdbtnGenerateDes = new JRadioButton("DES");
