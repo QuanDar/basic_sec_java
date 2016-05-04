@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidAESStreamException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidPasswordException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$KeyLength.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$Keys.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$StrongEncryptionNotAvailableException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/basic_security/beste_groep/encryption/AESTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="groepswerk basic security.iws" />
@@ -35,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AESFileTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AESFileTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="632">
+              <caret line="48" column="80" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,11 +43,10 @@
       <file leaf-file-name="AESFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="118" column="32" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="32" />
+            <state relative-caret-position="250">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
                 <element signature="e#0#10408#0" expanded="true" />
-                <element signature="imports" expanded="true" />
                 <element signature="e#10291#10292#0" expanded="true" />
                 <element signature="e#10331#10332#0" expanded="true" />
                 <element signature="e#10363#10364#0" expanded="true" />
@@ -67,8 +59,8 @@
       <file leaf-file-name="AESMessageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="450">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="125" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,9 +87,37 @@
       <file leaf-file-name="RSAKeyPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
+            <state relative-caret-position="157">
               <caret line="37" column="39" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="39" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1015#1016#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSAencryptAES.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSACipher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,6 +129,13 @@
               <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/image.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -146,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HelloWorldTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/test_classes/RSACipher.java" />
         <option value="$PROJECT_DIR$/src/main/java/test_classes/AESCipher.java" />
@@ -188,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAOldTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HybridCryptosystemTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java" />
@@ -197,6 +222,8 @@
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" />
+        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java" />
       </list>
     </option>
   </component>
@@ -1080,7 +1107,7 @@
       <workItem from="1461161148356" duration="149000" />
       <workItem from="1461831176112" duration="778000" />
       <workItem from="1462360083875" duration="904000" />
-      <workItem from="1462361035702" duration="17473000" />
+      <workItem from="1462361035702" duration="18862000" />
     </task>
     <task id="LOCAL-00001" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
       <created>1462360676732</created>
@@ -1103,7 +1130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462379584600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
+      <created>1462379974318</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1462379974318</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1139,7 +1173,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101738000" />
+    <option name="totallyTimeSpent" value="103127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1942" height="1631" extended-state="0" />
@@ -1192,7 +1226,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1201,7 +1235,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar!/java/lang/Runnable.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar!/java/io/FileOutputStream.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar!/java/io/FileInputStream.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar!/java/security/Key.class" />
@@ -1261,11 +1294,6 @@
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/image.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAZelfGeschreven.java">
@@ -1362,14 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="25" column="104" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HybridCryptosystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
@@ -1383,24 +1403,6 @@
         <state relative-caret-position="482">
           <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1418,10 +1420,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/image.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="450">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="125" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1430,11 +1447,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="118" column="32" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="32" />
+        <state relative-caret-position="250">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
             <element signature="e#0#10408#0" expanded="true" />
-            <element signature="imports" expanded="true" />
             <element signature="e#10291#10292#0" expanded="true" />
             <element signature="e#10331#10332#0" expanded="true" />
             <element signature="e#10363#10364#0" expanded="true" />
@@ -1443,10 +1459,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="632">
+          <caret line="48" column="80" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
