@@ -2,31 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HybridCryptosystemTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSATest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/RSA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/basic_security/beste_groep/encryption/RSATest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidAESStreamException.class" afterPath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidAESStreamException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidPasswordException.class" afterPath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidPasswordException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$KeyLength.class" afterPath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$KeyLength.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$Keys.class" afterPath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$Keys.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$StrongEncryptionNotAvailableException.class" afterPath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$StrongEncryptionNotAvailableException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES.class" afterPath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/basic_security/beste_groep/encryption/AESTest.class" afterPath="$PROJECT_DIR$/target/test-classes/basic_security/beste_groep/encryption/AESTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidAESStreamException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$InvalidPasswordException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$KeyLength.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$Keys.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES$StrongEncryptionNotAvailableException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/basic_security/beste_groep/encryption/AES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/basic_security/beste_groep/encryption/AESTest.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groepswerk basic security.iml" afterPath="$PROJECT_DIR$/groepswerk basic security.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" />
     </list>
     <ignored path="groepswerk basic security.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,26 +35,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AESTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java">
+      <file leaf-file-name="AESFileTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="900">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AES.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java">
+      <file leaf-file-name="AESFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="128" column="26" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="26" />
+            <state relative-caret-position="337">
+              <caret line="118" column="32" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="32" />
               <folding>
-                <element signature="e#9343#9344#0" expanded="false" />
-                <element signature="e#9409#9410#0" expanded="false" />
+                <element signature="e#0#10408#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#10291#10292#0" expanded="true" />
+                <element signature="e#10331#10332#0" expanded="true" />
+                <element signature="e#10363#10364#0" expanded="true" />
+                <element signature="e#10398#10399#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,16 +70,16 @@
             <state relative-caret-position="210">
               <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding>
-                <marker date="1462377077272" expanded="true" signature="325:1122" placeholder="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AESMessage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AESMessage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="-935">
               <caret line="217" column="37" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -193,12 +182,9 @@
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESCipher.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAZelfGeschreven.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESold.java" />
-        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTFileest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTFileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAOldTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
@@ -206,8 +192,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HybridCryptosystemTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" />
+        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
       </list>
     </option>
   </component>
@@ -495,7 +484,7 @@
       <recent name="CryptoUtils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AESTest">
+  <component name="RunManager" selected="JUnit.AESFileTest">
     <configuration default="false" name="RSAOldTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -542,10 +531,10 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="AESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="AESFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="basic_security.beste_groep.encryption.*" />
+          <option name="PATTERN" value="basic_security.beste_groep.encryption.AES" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -553,7 +542,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="basic_security.beste_groep.encryption" />
-      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESTest" />
+      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESFileTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1040,13 +1029,13 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.RSAOldTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.AESTCipherest.testEncryptionDecryption" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AESTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AESFileTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.HybridCryptosystemTest" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.AESMessageTest" />
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AESTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AESFileTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.AESMessageTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.HybridCryptosystemTest" />
       </list>
@@ -1091,7 +1080,7 @@
       <workItem from="1461161148356" duration="149000" />
       <workItem from="1461831176112" duration="778000" />
       <workItem from="1462360083875" duration="904000" />
-      <workItem from="1462361035702" duration="17082000" />
+      <workItem from="1462361035702" duration="17473000" />
     </task>
     <task id="LOCAL-00001" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
       <created>1462360676732</created>
@@ -1107,30 +1096,25 @@
       <option name="project" value="LOCAL" />
       <updated>1462362882392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
+      <created>1462379584600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1462379584600</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AESFileTest - 2016.05.04 at 17h 56m 17s.xml">
+    <history-entry file="AESFileTest - 2016.05.04 at 18h 34m 25s.xml">
       <configuration name="AESFileTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESFileTest - 2016.05.04 at 17h 56m 48s.xml">
+    <history-entry file="AESFileTest - 2016.05.04 at 18h 35m 23s.xml">
       <configuration name="AESFileTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESFileTest - 2016.05.04 at 17h 58m 48s.xml">
+    <history-entry file="AESFileTest - 2016.05.04 at 18h 38m 23s.xml">
       <configuration name="AESFileTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AESMessageTest - 2016.05.04 at 17h 57m 43s.xml">
-      <configuration name="AESMessageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 17h 59m 45s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 02m 13s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 03m 23s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="AESTest - 2016.05.04 at 18h 05m 47s.xml">
       <configuration name="AESTest" configurationId="JUnit" />
@@ -1141,9 +1125,21 @@
     <history-entry file="AESTest - 2016.05.04 at 18h 30m 41s.xml">
       <configuration name="AESTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AESTest - 2016.05.04 at 18h 35m 37s.xml">
+      <configuration name="AESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AESTest - 2016.05.04 at 18h 36m 57s.xml">
+      <configuration name="AESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AESTest - 2016.05.04 at 18h 37m 12s.xml">
+      <configuration name="AESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AESTest - 2016.05.04 at 18h 38m 06s.xml">
+      <configuration name="AESTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101347000" />
+    <option name="totallyTimeSpent" value="101738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1942" height="1631" extended-state="0" />
@@ -1342,16 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <marker date="1462377077272" expanded="true" signature="325:1122" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAOldTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1365,16 +1351,6 @@
         <state relative-caret-position="600">
           <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1428,20 +1404,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="128" column="26" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="26" />
-          <folding>
-            <element signature="e#9343#9344#0" expanded="false" />
-            <element signature="e#9409#9410#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="-935">
           <caret line="217" column="37" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1449,6 +1414,41 @@
             <element signature="e#6450#6451#0" expanded="true" />
             <element signature="e#6512#6513#0" expanded="true" />
             <element signature="e#6580#6581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="118" column="32" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10408#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#10291#10292#0" expanded="true" />
+            <element signature="e#10331#10332#0" expanded="true" />
+            <element signature="e#10363#10364#0" expanded="true" />
+            <element signature="e#10398#10399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

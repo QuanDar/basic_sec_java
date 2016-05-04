@@ -7,7 +7,7 @@ import org.junit.Assert;
 /**
  * Created by QuanDar on 11/03/2016.
  */
-public class AESTest {
+public class AESFileTest {
 
     @org.junit.Test
     public void testFileEncryption()
@@ -18,7 +18,7 @@ public class AESTest {
  *C:\Program Files\Java\jdk1.8.0_73\jre\lib\security  */
         //Download: http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
 
-        AES aes = new AES();
+        AESFile aes = new AESFile();
         char[] password = "pxl".toCharArray();
         char[] wrongPass = "pxxl".toCharArray();
         //Path path = Paths.get("image.jpg");
@@ -40,7 +40,7 @@ public class AESTest {
         FileOutputStream fos = new FileOutputStream(fileEncrypted);
 
         // 128, 192, 256 of de enum KeyLength gebruiken
-        aes.encryptFile(AES.KeyLength.TWO_FIFTY_SIX, password, fis, fos);
+        aes.encryptFile(AESFile.KeyLength.TWO_FIFTY_SIX, password, fis, fos);
 
         FileInputStream fisEncrypted = new FileInputStream(fileEncrypted);
         FileOutputStream fosDecrypted = new FileOutputStream("C:\\Users\\royXD\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\decrypted_image.jpg");

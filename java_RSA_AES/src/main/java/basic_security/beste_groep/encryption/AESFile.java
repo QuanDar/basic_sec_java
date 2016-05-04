@@ -25,7 +25,7 @@ import javax.crypto.spec.*;
  * {@link #encrypt} and {@link #decrypt}, which encrypt and decrypt arbitrary
  * streams of data, respectively.
  */
-public class AES {
+public class AESFile {
 
     // AES specification - changing will break existing encrypted streams!
     private static final String CIPHER_SPEC = "AES/CBC/PKCS5Padding";
