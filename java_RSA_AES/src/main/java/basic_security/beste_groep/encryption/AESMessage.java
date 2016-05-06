@@ -105,7 +105,7 @@ public class AESMessage {
              * RSAZelfGeschreven/ECB/OAEPWithSHA-1AndMGF1Padding (1024, 2048)
              * RSAZelfGeschreven/ECB/OAEPWithSHA-256AndMGF1Padding (1024, 2048)
              */
-            cipher = Cipher.getInstance("AESFile/CBC/PKCS5Padding");
+            cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         } catch (NoSuchAlgorithmException noSuchAlgorithmException) {
             throw noSuchAlgorithmException;
         } catch (NoSuchPaddingException noSuchPaddingException) {
@@ -149,7 +149,7 @@ public class AESMessage {
     }
 
     public SecretKey getDecodedSecretKey(String secretKey) {
-        return new SecretKeySpec(base64.decode(secretKey), "AESFile");
+        return new SecretKeySpec(base64.decode(secretKey), "AES");
     }
 
 
@@ -215,7 +215,7 @@ public class AESMessage {
          * https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#KeyFactory
          * In tegenstelling tot KeyFactory die op assymetric keys werkt, werkt SecretKeyFactory alleen op symmetrische keys.
          */
-        secretKey = new SecretKeySpec(secretKeyFactory.generateSecret(keySpec).getEncoded(), "AESFile");
+        secretKey = new SecretKeySpec(secretKeyFactory.generateSecret(keySpec).getEncoded(), "AES");
 
         /**
          * https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#Cipher
