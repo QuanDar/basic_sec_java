@@ -153,6 +153,59 @@ public class AESFile {
         }
     }
 
+    /**
+     *
+    */
+    public OutputStream encryptMessage(KeyLength keyLength, char[] password, InputStream input)
+            throws StrongEncryptionNotAvailableException, IOException {
+        OutputStream output = new ByteArrayOutputStream();
+
+        // generate salt and derive keys for authentication and encryption
+        byte[] salt = generateSalt(SALT_LENGTH);
+        Keys keys = keygen(keyLength.getBits(), password, salt);
+
+        // initialize AES encryption
+        Cipher encrypt = null;
+        try {
+            encrypt = Cipher.getInstance(CIPHER_SPEC);
+            encrypt.init(Cipher.ENCRYPT_MODE, keys.encryption);
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException impossible) { }
+        catch (InvalidKeyException e) { // 192 or 256-bit AES not available
+            throw new StrongEncryptionNotAvailableException(keyLength.getBits());
+        }
+
+        // get initialization vector
+        byte[] iv = null;
+        try {
+            iv = encrypt.getParameters().getParameterSpec(IvParameterSpec.class).getIV();
+        } catch (InvalidParameterSpecException impossible) { }
+
+        // write authentication and AES initialization data
+        output.write(keyLength.getBits() / 8);
+        output.write(salt);
+        output.write(keys.authentication.getEncoded());
+        output.write(iv);
+
+        // read data from input into buffer, encryptMessage and write to output
+        byte[] buffer = new byte[BUFFER_SIZE];
+        int numRead;
+        byte[] encrypted = null;
+        while ((numRead = input.read(buffer)) > 0) {
+            encrypted = encrypt.update(buffer, 0, numRead);
+            if (encrypted != null) {
+                output.write(encrypted);
+            }
+        }
+        try { // finish encryption - do final block
+            encrypted = encrypt.doFinal();
+        } catch (IllegalBlockSizeException | BadPaddingException impossible) { }
+        if (encrypted != null) {
+            output.write(encrypted);
+        }
+
+        return output;
+    }
+
     public void decryptFile(char[] password, InputStream input, OutputStream output)
             throws InvalidPasswordException, InvalidAESStreamException, IOException,
             StrongEncryptionNotAvailableException {
@@ -203,6 +256,61 @@ public class AESFile {
         if (decrypted != null) {
             output.write(decrypted);
         }
+    }
+
+    public OutputStream decryptMessage(char[] password, InputStream input)
+            throws InvalidPasswordException, InvalidAESStreamException, IOException,
+            StrongEncryptionNotAvailableException {
+        OutputStream output = new ByteArrayOutputStream();
+        int keyLength = input.read() * 8;
+        // Check validity of key length
+        if (keyLength != 128 && keyLength != 192 && keyLength != 256) {
+            throw new InvalidAESStreamException();
+        }
+
+        // read salt, generate keys, and authenticate password
+        byte[] salt = new byte[SALT_LENGTH];
+        input.read(salt);
+        Keys keys = keygen(keyLength, password, salt);
+        byte[] authRead = new byte[AUTH_KEY_LENGTH];
+        input.read(authRead);
+        if (!Arrays.equals(keys.authentication.getEncoded(), authRead)) {
+            throw new InvalidPasswordException();
+        }
+
+        // initialize AES decryption
+        byte[] iv = new byte[16]; // 16-byte I.V. regardless of key size
+        input.read(iv);
+        Cipher decrypt = null;
+        try {
+            decrypt = Cipher.getInstance(CIPHER_SPEC);
+            decrypt.init(Cipher.DECRYPT_MODE, keys.encryption, new IvParameterSpec(iv));
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException
+                | InvalidAlgorithmParameterException impossible) { }
+        catch (InvalidKeyException e) { // 192 or 256-bit AES not available
+            throw new StrongEncryptionNotAvailableException(keyLength);
+        }
+
+        // read data from input into buffer, decryptMessage and write to output
+        byte[] buffer = new byte[BUFFER_SIZE];
+        int numRead;
+        byte[] decrypted;
+        while ((numRead = input.read(buffer)) > 0) {
+            decrypted = decrypt.update(buffer, 0, numRead);
+            if (decrypted != null) {
+                output.write(decrypted);
+            }
+        }
+        try { // finish decryption - do final block
+            decrypted = decrypt.doFinal();
+        } catch (IllegalBlockSizeException | BadPaddingException e) {
+            throw new InvalidAESStreamException(e);
+        }
+        if (decrypted != null) {
+            output.write(decrypted);
+        }
+
+        return output;
     }
     /**
      * A tuple of encryption and authentication keys returned by {@link #keygen}

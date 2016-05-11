@@ -39,6 +39,15 @@ public class RSACipher {
         return Base64.encodeBase64String(cipher.doFinal(rawText.getBytes(encoding)));
     }
 
+    public String encryptKey(String rawText, PublicKey publicKey, String transformation, String encoding)
+            throws IOException, GeneralSecurityException {
+
+        Cipher cipher = Cipher.getInstance(transformation);
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+
+        return Base64.encodeBase64String(cipher.doFinal(rawText.getBytes(encoding)));
+    }
+
     public String decrypt(String cipherText, String privateKeyPath, String transformation, String encoding)
             throws IOException, GeneralSecurityException {
 

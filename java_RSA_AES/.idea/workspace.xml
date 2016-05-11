@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groepswerk basic security.iml" afterPath="$PROJECT_DIR$/groepswerk basic security.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" afterPath="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
     </list>
@@ -38,38 +38,10 @@
       <file leaf-file-name="AESFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="382">
+              <caret line="312" column="22" selection-start-line="312" selection-start-column="22" selection-end-line="312" selection-end-column="22" />
               <folding>
-                <element signature="e#0#10408#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AESMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="151" column="63" selection-start-line="151" selection-start-column="63" selection-end-line="151" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6414#6415#0" expanded="true" />
-                <element signature="e#6446#6447#0" expanded="true" />
-                <element signature="e#6508#6509#0" expanded="true" />
-                <element signature="e#6576#6577#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AESMessageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="76" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="76" />
-              <folding>
+                <element signature="e#0#14672#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -79,8 +51,8 @@
       <file leaf-file-name="RSAKeyPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="29" column="39" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="-18">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#937#938#0" expanded="true" />
@@ -92,45 +64,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/image.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RSACipherTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RSACipher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+            <state relative-caret-position="1025">
+              <caret line="50" column="51" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Steganography.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/basicSecurity_stegographie/Steganography.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
-              <folding>
-                <element signature="e#3490#3491#0" expanded="true" />
-                <element signature="e#3548#3549#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,11 +79,33 @@
       <file leaf-file-name="RSAKeyPairTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="332">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AESFileTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1107">
+              <caret line="131" column="35" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TCPClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/view/TCPClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2616">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -214,13 +176,13 @@
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HybridCryptosystemTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AES.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
       </list>
     </option>
   </component>
@@ -242,9 +204,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1606" />
-    <option name="height" value="1087" />
+    <option name="x" value="-11" />
+    <option name="width" value="1945" />
+    <option name="height" value="1631" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -273,7 +235,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -558,6 +519,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -569,7 +531,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Google Drive/0- School/L 2 PXL/ProgAdv/java/oef" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
@@ -602,53 +564,7 @@
       <recent name="CryptoUtils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AESFileTest">
-    <configuration default="false" name="RSAOldTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="basic_security.beste_groep.encryption.AESMessage" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.RSAOldTest" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="groepswerk basic security" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="AESTCipherest.testEncryptionDecryption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="basic_security.beste_groep.encryption.AESMessage" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="groepswerk basic security" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="basic_security.beste_groep.encryption" />
-      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESTCipherest" />
-      <option name="METHOD_NAME" value="testEncryptionDecryption" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.AESFileTest.testEncryptDecryptWithKeyPair">
     <configuration default="false" name="AESFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -675,32 +591,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="HybridCryptosystemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="basic_security.beste_groep.encryption.AESMessage" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="groepswerk basic security" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="PACKAGE_NAME" value="basic_security.beste_groep.encryption" />
-      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.HybridCryptosystemTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="AESMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -715,6 +605,84 @@
       <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESMessageTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AESFileTest.testMessageEncryption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="basic_security.beste_groep.encryption.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="groepswerk basic security" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="basic_security.beste_groep.encryption" />
+      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESFileTest" />
+      <option name="METHOD_NAME" value="testMessageEncryption" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AESFileTest.testEncryptDecryptWithKeyPairFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="basic_security.beste_groep.encryption.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="groepswerk basic security" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="basic_security.beste_groep.encryption" />
+      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESFileTest" />
+      <option name="METHOD_NAME" value="testEncryptDecryptWithKeyPairFiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AESFileTest.testEncryptDecryptWithKeyPair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="basic_security.beste_groep.encryption.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="groepswerk basic security" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="basic_security.beste_groep.encryption" />
+      <option name="MAIN_CLASS_NAME" value="basic_security.beste_groep.encryption.AESFileTest" />
+      <option name="METHOD_NAME" value="testEncryptDecryptWithKeyPair" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1145,17 +1113,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.RSAOldTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AESTCipherest.testEncryptionDecryption" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AESFileTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HybridCryptosystemTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AESMessageTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.AESFileTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AESMessageTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AESFileTest.testMessageEncryption" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AESFileTest.testEncryptDecryptWithKeyPairFiles" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AESFileTest.testEncryptDecryptWithKeyPair" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AESFileTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AESMessageTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HybridCryptosystemTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AESFileTest.testEncryptDecryptWithKeyPair" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AESFileTest.testEncryptDecryptWithKeyPairFiles" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AESFileTest.testMessageEncryption" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AESFileTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AESMessageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1200,7 +1170,8 @@
       <workItem from="1462360083875" duration="904000" />
       <workItem from="1462361035702" duration="18886000" />
       <workItem from="1462391701858" duration="412000" />
-      <workItem from="1462562097731" duration="4142000" />
+      <workItem from="1462562097731" duration="5995000" />
+      <workItem from="1462959172495" duration="5019000" />
     </task>
     <task id="LOCAL-00001" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
       <created>1462360676732</created>
@@ -1237,61 +1208,70 @@
       <option name="project" value="LOCAL" />
       <updated>1462381378209</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="RSA classes aangepast.">
+      <created>1462566248285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1462566248285</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AESFileTest - 2016.05.04 at 18h 34m 25s.xml">
+    <history-entry file="AESFileTest - 2016.05.11 at 12h 05m 58s.xml">
       <configuration name="AESFileTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESFileTest - 2016.05.04 at 18h 35m 23s.xml">
-      <configuration name="AESFileTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testEncryptDecryptWithKeyPair - 2016.05.11 at 12h 49m 36s.xml">
+      <configuration name="AESFileTest.testEncryptDecryptWithKeyPair" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESFileTest - 2016.05.04 at 18h 38m 23s.xml">
-      <configuration name="AESFileTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testEncryptDecryptWithKeyPairFiles - 2016.05.11 at 12h 48m 28s.xml">
+      <configuration name="AESFileTest.testEncryptDecryptWithKeyPairFiles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 05m 47s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testEncryptDecryptWithKeyPairFiles - 2016.05.11 at 12h 49m 20s.xml">
+      <configuration name="AESFileTest.testEncryptDecryptWithKeyPairFiles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 13m 39s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testMessageEncryption - 2016.05.11 at 12h 08m 17s.xml">
+      <configuration name="AESFileTest.testMessageEncryption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 30m 41s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testMessageEncryption - 2016.05.11 at 12h 09m 39s.xml">
+      <configuration name="AESFileTest.testMessageEncryption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 35m 37s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testMessageEncryption - 2016.05.11 at 12h 36m 49s.xml">
+      <configuration name="AESFileTest.testMessageEncryption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 36m 57s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testMessageEncryption - 2016.05.11 at 12h 37m 39s.xml">
+      <configuration name="AESFileTest.testMessageEncryption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 37m 12s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESFileTest_testMessageEncryption - 2016.05.11 at 12h 40m 51s.xml">
+      <configuration name="AESFileTest.testMessageEncryption" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AESTest - 2016.05.04 at 18h 38m 06s.xml">
-      <configuration name="AESTest" configurationId="JUnit" />
+    <history-entry file="AESMessageTest - 2016.05.11 at 11h 55m 27s.xml">
+      <configuration name="AESMessageTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107705000" />
+    <option name="totallyTimeSpent" value="114577000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1606" height="1087" extended-state="0" />
+    <frame x="-11" y="0" width="1945" height="1631" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33922502" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4092454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4092454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2100884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32834807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1302,11 +1282,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33922502" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.2794268" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32834807" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1328,7 +1306,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1337,8 +1315,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/extra_uitleg_hulpmiddelen_code/test_classes_buitenaf/BouncyCastleProvider_AES_CBC.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/testen_andere_classes/CryptoUtilsTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/testen_andere_classes/HybridCryptosystemTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/extra_uitleg_hulpmiddelen_code/any_file/AES_Algo.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessagesTest.java" />
@@ -1365,13 +1341,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1488">
           <caret line="96" column="43" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6414#6415#0" expanded="true" />
-            <element signature="e#6446#6447#0" expanded="true" />
-            <element signature="e#6508#6509#0" expanded="true" />
-            <element signature="e#6576#6577#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1409,11 +1379,8 @@
         <state relative-caret-position="700">
           <caret line="28" column="75" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
           <folding>
-            <element signature="e#0#10408#0" expanded="true" />
-            <element signature="e#10291#10292#0" expanded="true" />
-            <element signature="e#10331#10332#0" expanded="true" />
-            <element signature="e#10363#10364#0" expanded="true" />
-            <element signature="e#10398#10399#0" expanded="true" />
+            <element signature="e#0#14672#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1437,11 +1404,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSATest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/HybridCryptosystemTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/image.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1450,9 +1412,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/basicSecurity_stegographie/Steganography.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2500">
+          <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+          <folding>
+            <element signature="e#3490#3491#0" expanded="false" />
+            <element signature="e#3548#3549#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/image.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/image.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1295">
+        <state relative-caret-position="-1866">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
@@ -1468,7 +1451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSLServerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="175">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
@@ -1476,7 +1459,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/TestClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="100">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
@@ -1484,8 +1467,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/TestServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="100">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/Hash/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/Hash/Hash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1500,33 +1499,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/view/TCPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1805">
+        <state relative-caret-position="-2616">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/basicSecurity_stegographie/Steganography.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
+        <state relative-caret-position="382">
+          <caret line="312" column="22" selection-start-line="312" selection-start-column="22" selection-end-line="312" selection-end-column="22" />
           <folding>
-            <element signature="e#3490#3491#0" expanded="true" />
-            <element signature="e#3548#3549#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/image.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="76" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="76" />
-          <folding>
+            <element signature="e#0#14672#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1534,41 +1518,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="151" column="63" selection-start-line="151" selection-start-column="63" selection-end-line="151" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6414#6415#0" expanded="true" />
-            <element signature="e#6446#6447#0" expanded="true" />
-            <element signature="e#6508#6509#0" expanded="true" />
-            <element signature="e#6576#6577#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="25">
+          <caret line="155" column="32" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/AESFile.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESMessageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10408#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="625">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="-135">
+          <caret line="59" column="69" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSAKeyPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="-18">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#937#938#0" expanded="true" />
@@ -1581,36 +1564,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/encryption/RSACipher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        <state relative-caret-position="1025">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAencryptAES.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="332">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSACipherTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="1107">
+          <caret line="131" column="35" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
