@@ -30,6 +30,8 @@ public class AESFileTest {
     private static char[] password;
     private static char[] wrongPass;
     private static byte[] encryptedMessageBytes;
+    private static String myMessage;
+
 
     @Before
     public void settings(){
@@ -122,7 +124,7 @@ public class AESFileTest {
     public void testMessageEncryption()
             throws Exception {
 
-        String myMessage = "this is a program, hello sir";
+        myMessage = "this is a program, hello sir";
         InputStream inputMessage = new ByteArrayInputStream(myMessage.getBytes(StandardCharsets.UTF_8));
         ByteArrayOutputStream output = (ByteArrayOutputStream) aes.encryptMessage(AESFile.KeyLength.ONE_NINETY_TWO, password, inputMessage);
 
@@ -139,16 +141,16 @@ public class AESFileTest {
 //        System.out.println("Text written: " + in.readLine());
         encryptedMessageBytes = output.toByteArray();
 
+        InputStream input = new ByteArrayInputStream(encryptedMessageBytes);
+        OutputStream outputDecrypted = aes.decryptMessage(password, input);
 
+        System.out.println(outputDecrypted.toString());
+        Assert.assertEquals(outputDecrypted.toString(), myMessage);
     }
 
     @org.junit.Test
     public void testMessageDecryption()
             throws Exception {
 
-        InputStream input = new ByteArrayInputStream(encryptedMessageBytes);
-        OutputStream outputDecrypted = aes.decryptMessage(password, input);
-
-        System.out.println(outputDecrypted.toString());
     }
 }
