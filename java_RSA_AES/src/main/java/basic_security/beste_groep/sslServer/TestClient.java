@@ -2,13 +2,15 @@ package basic_security.beste_groep.sslServer;
 
 import java.io.IOException;
 
+import basic_security.beste_groep.controller.Packet;
+
 public class TestClient {
 
 	public static void main(String[] args) {
 		SSL_Client c = new SSL_Client();
-		c.createClientSocket();
+		c.createClientSocket(new Packet(null, null, null, null));
 		
-		try {
+		/*try {
 			c.writeToSocket("Hello world");
 		}
 		catch (IOException e) {
@@ -16,7 +18,7 @@ public class TestClient {
 			System.out.println(e);
 		}
 		
-		//c.closeClientSocket();// TODO Auto-generated method stub
+		//c.closeClientSocket();// TODO Auto-generated method stub */
 
 	}
 

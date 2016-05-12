@@ -8,18 +8,23 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
 import java.security.cert.CertificateException;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
+
+import basic_security.beste_groep.controller.Packet;
 
 public class SSL_Client {
 	//Socket on which the program comunicates
@@ -37,7 +42,8 @@ public class SSL_Client {
 	/**
 	 * This method opens an ssl socket for client use.
 	 */
-		public void createClientSocket() {
+		public void createClientSocket(Packet packet) {
+			
 			/* Source
 			 * http://www.programcreek.com/java-api-examples/javax.net.ssl.KeyManagerFactory	
        		 */
@@ -72,12 +78,23 @@ public class SSL_Client {
 				
 				//Stream voor het lezen vanuit de socket
 				sslIS = sslsocket.getInputStream();
-				
+				ObjectInputStream in = new ObjectInputStream(sslIS);
 				//Stream voor het schrijven naar de socket
 				sslOS = sslsocket.getOutputStream();
+				ObjectOutputStream out = new ObjectOutputStream(sslOS);
 				
-				//Dit stuk is wat de server met de conection doet. Dit moet verder aangepast worden aan de noden
-				writeToSocket("hello");
+				
+				//=================================================================
+				boolean encrypted = false;
+				PublicKey serverKey;
+				while (!encrypted) {
+					serverKey = (PublicKey) in.readObject();
+					System.out.println("encrypting AES key");
+					encrypted = true;
+				}
+				out.writeObject(packet);
+				
+				//=================================================================
 				closeClientSocket();
 			}
 			catch (SSLHandshakeException e) {
@@ -96,6 +113,9 @@ public class SSL_Client {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (CertificateException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

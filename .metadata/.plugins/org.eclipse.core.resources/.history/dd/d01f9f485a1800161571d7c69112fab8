@@ -1,0 +1,5 @@
+package basic_security.beste_groep.controller;
+
+public class Packet {
+
+}

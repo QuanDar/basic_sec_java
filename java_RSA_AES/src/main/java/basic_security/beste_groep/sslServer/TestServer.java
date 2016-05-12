@@ -1,5 +1,6 @@
 package basic_security.beste_groep.sslServer;
 
+import java.security.GeneralSecurityException;
 import java.security.KeyStoreException;
 
 public class TestServer {
@@ -9,7 +10,7 @@ public class TestServer {
 	//static boolean debuging = false;
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws GeneralSecurityException {
 		
 		//Setting properties for keystore
 		//System.setProperty("javax.net.ssl.keyStore",keystore);

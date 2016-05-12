@@ -40,8 +40,13 @@ public class Controller {
 	
 	private File symmetricEncryptedFile = new File("File_1");
 	
+	//part of the package
 	private PrivateKey RSAPrivateKey;
 	private PublicKey RSAPublicKey;
+	private String encryptedAesKey;
+	private String encryptedHash;
+	
+	private PublicKey publicKeyServer;
 	
 	private AESFile aes = new AESFile();
 	private RSAKeyPair rsaPair;
@@ -118,18 +123,16 @@ public class Controller {
 		updateLog("Hash of original file is now created.");
 
 	}
-
-	public void encryptHash() {
-		/*
-		 * 
-		 * 
-		 * TODO Encrypt hash code.
-		 */
+	/* De encrypted hash deel 1 paket */
+	public void encryptHash() throws IOException, GeneralSecurityException {
+		final String transformation = "RSA/ECB/PKCS1Padding";
+	    final String encoding = "UTF-8";
+		encryptedHash = rsaCipher.encrypt(hashOriginalFile, publicKeyServer, transformation, encoding);
 		updateLog("Hash of the original file is now encrypted.");
 	}
 
 	public void sendFile() {
-		/*
+		/*	
 		 * 
 		 * 
 		 * TODO Send file code.
