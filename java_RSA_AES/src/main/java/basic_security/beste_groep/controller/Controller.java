@@ -1,8 +1,20 @@
 package basic_security.beste_groep.controller;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.security.GeneralSecurityException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -11,11 +23,32 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JTextPane;
 
+import basic_security.beste_groep.Hash.Hash;
+import basic_security.beste_groep.encryption.AESFile;
+import basic_security.beste_groep.encryption.AESFile.KeyLength;
+import basic_security.beste_groep.encryption.AESFile.StrongEncryptionNotAvailableException;
+import basic_security.beste_groep.encryption.RSACipher;
+import basic_security.beste_groep.encryption.RSAKeyPair;
 import basic_security.beste_groep.view.TCPClient;
 
 public class Controller {
 
 	private JTextPane log;
+	
+	private String hashOriginalFile;
+	private String hashSymmetricEncryptedFile;
+	
+	private File symmetricEncryptedFile = new File("File_1");
+	
+	private PrivateKey RSAPrivateKey;
+	private PublicKey RSAPublicKey;
+	
+	private AESFile aes = new AESFile();
+	private RSAKeyPair rsaPair;
+	private RSACipher rsaCipher;
+	
+	private String symmetricPassword = "PXL";
+	
 	private boolean encryptedFilesExist;
 
 	public Controller(JTextPane tp) {
@@ -27,51 +60,45 @@ public class Controller {
 	}
 
 	public void generateSymmetricKey(String type) {
-		/*
-		 * TODO Symmetric key code.
-		 */
 		updateLog("Symmetric " + type + " key generated.");
 	}
 
-	public void generateRSAKeys() {
+	public void generateRSAKeys() throws GeneralSecurityException, IOException {
 		if (encryptedFilesExist) {
-			/*
-			 * 
-			 * 
-			 * TODO Encrypted files deletion code.
-			 */
+			symmetricEncryptedFile.delete();
 			updateLog("Previous encrypted files are now deleted because new keys were generated.");
 		}
-		generatePrivateRSAKey();
-		generatePublicRSAKey();
+		rsaPair = new RSAKeyPair(2048);
+		generatePrivateRSAKey(rsaPair);
+		generatePublicRSAKey(rsaPair);
 	}
 
-	public void generatePrivateRSAKey() {
-		/*
-		 * 
-		 * 
-		 * TODO Private RSAZelfGeschreven key code.
-		 */
-		updateLog("Private RSAZelfGeschreven key generated.");
+	public void generatePrivateRSAKey(RSAKeyPair pair) throws IOException {
+		RSAPrivateKey = pair.getPrivateKey();
+		rsaPair.toFileSystem("Private_A", "Public_A");
+		updateLog("Private RSA key generated.");
 	}
 
-	public void generatePublicRSAKey() {
-		/*
-		 * 
-		 * 
-		 * TODO Public RSAZelfGeschreven key code.
-		 */
-		updateLog("Public RSAZelfGeschreven key generated.");
+	public void generatePublicRSAKey(RSAKeyPair pair) {
+		RSAPublicKey = pair.getPublicKey();
+		updateLog("Public RSA key generated.");
 	}
 
-	public void encryptFile(File f) {
-		/*
-		 * 
-		 * 
-		 * TODO Encrypt file code.
-		 */
+	//File_1 wordt aangemaakt.
+	public void encryptFile(File file) throws StrongEncryptionNotAvailableException, IOException {
+		InputStream input = new FileInputStream(file);
+		OutputStream output = new FileOutputStream(new File("File_1"));
+		aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, symmetricPassword.toCharArray(), input, output);
 		encryptedFilesExist = true;
 		updateLog("File encrypted with symmetric key.");
+	}
+	
+	public void hashSymmetricEncryptedFile() throws Exception {
+		Path path = Paths.get(symmetricEncryptedFile.getAbsolutePath());
+		byte[] data = Files.readAllBytes(path);
+		hashSymmetricEncryptedFile = Hash.getHash(data);
+		System.out.println("Hash of encrypted file: " + hashSymmetricEncryptedFile);
+		updateLog("Hash of symmetric encrypted file is now created.");
 	}
 
 	public void encryptSymmetricKey() {
@@ -83,13 +110,12 @@ public class Controller {
 		updateLog("Symmetric key is now encrypted.");
 	}
 
-	public void hashOriginalFile() {
-		/*
-		 * 
-		 * 
-		 * TODO Hash original file code.
-		 */
-		updateLog("Original file is now hashed.");
+	public void hashOriginalFile(File file) throws Exception {
+		Path path = Paths.get(file.getAbsolutePath());
+		byte[] data = Files.readAllBytes(path);
+		hashOriginalFile = Hash.getHash(data);
+		System.out.println("Hash of original file: " + hashOriginalFile);
+		updateLog("Hash of original file is now created.");
 
 	}
 
@@ -124,5 +150,4 @@ public class Controller {
 			e.printStackTrace();
 		}
 	}
-
 }

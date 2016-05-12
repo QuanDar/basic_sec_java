@@ -153,9 +153,6 @@ public class AESFile {
         }
     }
 
-    /**
-     *
-    */
     public OutputStream encryptMessage(KeyLength keyLength, char[] password, InputStream input)
             throws StrongEncryptionNotAvailableException, IOException {
         OutputStream output = new ByteArrayOutputStream();

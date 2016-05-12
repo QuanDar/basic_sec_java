@@ -14,7 +14,9 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.security.GeneralSecurityException;
 
 import javax.swing.JRadioButton;
 import javax.swing.JLabel;
@@ -45,7 +47,7 @@ public class TCPClient {
 	
 	private ButtonGroup grp;
 	private JFileChooser fileChooser;
-	private File file;
+	private File originalFile;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -136,7 +138,12 @@ public class TCPClient {
 		btnGenerateKeys = new JButton("Generate keys");
 		btnGenerateKeys.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				generateKeysButtonAction(arg0);
+				try {
+					generateKeysButtonAction(arg0);
+				} catch (GeneralSecurityException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		btnGenerateKeys.setBounds(10, 88, 120, 23);
@@ -145,14 +152,14 @@ public class TCPClient {
 		browseButton = new JButton("Browse...");
 		browseButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				file = null;
+				originalFile = null;
 				fileChooser = new JFileChooser();
-				while(file == null) {
+				while(originalFile == null) {
 					fileChooser.showOpenDialog(null);
-					file = fileChooser.getSelectedFile();
+					originalFile = fileChooser.getSelectedFile();
 				}
-				browseLabel.setText(file.getName());
-				con.updateLog("Selected file: " + file.getAbsolutePath());
+				browseLabel.setText(originalFile.getName());
+				con.updateLog("Selected file: " + originalFile.getAbsolutePath());
 				encryptButton.setEnabled(true);
 				sendButton.setEnabled(false);
 			}
@@ -164,7 +171,12 @@ public class TCPClient {
 		encryptButton = new JButton("Encrypt file");
 		encryptButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				encryptFileButtonAction(arg0);
+				try {
+					encryptFileButtonAction(arg0);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		encryptButton.setEnabled(false);
@@ -182,7 +194,7 @@ public class TCPClient {
 		frame.getContentPane().add(sendButton);
 	}
 	
-	public void generateKeysButtonAction(ActionEvent arg0) {
+	public void generateKeysButtonAction(ActionEvent arg0) throws GeneralSecurityException, IOException {
 		con.generateSymmetricKey(grp.getSelection().getActionCommand());
 		con.generateRSAKeys();
 		browseButton.setEnabled(true);
@@ -191,10 +203,11 @@ public class TCPClient {
 		sendButton.setEnabled(false);
 	}
 	
-	public void encryptFileButtonAction(ActionEvent arg0) {
-		con.encryptFile(file);
+	public void encryptFileButtonAction(ActionEvent arg0) throws Exception {
+		con.encryptFile(originalFile);
 		con.encryptSymmetricKey();
-		con.hashOriginalFile();
+		con.hashOriginalFile(originalFile);
+		con.hashSymmetricEncryptedFile();
 		con.encryptHash();
 		sendButton.setEnabled(true);
 	}
