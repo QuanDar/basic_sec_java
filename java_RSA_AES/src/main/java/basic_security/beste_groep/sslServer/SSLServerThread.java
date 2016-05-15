@@ -39,18 +39,21 @@ public class SSLServerThread extends Thread
 				
 				ObjectOutputStream out = new ObjectOutputStream(_sslOS))
 		{
+	//==============================================================================================================
 			out.writeObject(publicKey);
 			
 			ObjectInputStream in = new ObjectInputStream(_sslIS);
-			Packet Input;
+			Packet input;
 			boolean recieved = false;
 			while ( !recieved) {
-				Input = (Packet) in.readObject();
-				System.out.println(Input.toString());
-				System.out.flush();			//Gegevens door de stream puche
-				recieved = true;
+				input = (Packet) in.readObject();
+				if (input != null) {
+					recieved = true;
+				}
 			}
-				
+			System.out.println("Transmision complete");
+			//Packet doorgeven aan het juiste object	
+	//==============================================================================================================
 			sslSocket.close();
 		} catch (IOException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block

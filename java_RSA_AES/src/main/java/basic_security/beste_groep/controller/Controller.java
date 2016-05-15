@@ -29,32 +29,33 @@ import basic_security.beste_groep.encryption.AESFile.KeyLength;
 import basic_security.beste_groep.encryption.AESFile.StrongEncryptionNotAvailableException;
 import basic_security.beste_groep.encryption.RSACipher;
 import basic_security.beste_groep.encryption.RSAKeyPair;
+import basic_security.beste_groep.sslServer.SSL_Client;
 import basic_security.beste_groep.view.TCPClient;
 
 public class Controller {
 
 	private JTextPane log;
 	
-	private String hashOriginalFile;
-	private String hashSymmetricEncryptedFile;
+	private String _hashOriginalFile;
+	private String _hashSymmetricEncryptedFile;
 	
 	private File symmetricEncryptedFile = new File("File_1");
 	
 	//part of the package
-	private PrivateKey RSAPrivateKey;
-	private PublicKey RSAPublicKey;
-	private String encryptedAesKey;
-	private String encryptedHash;
+	private PrivateKey _RSAPrivateKey;
+	private PublicKey _RSAPublicKey;
+	private String _encryptedAesKey;
+	private String _encryptedHash;
 	
-	private PublicKey publicKeyServer;
+	private PublicKey _publicKeyServer;
 	
-	private AESFile aes = new AESFile();
-	private RSAKeyPair rsaPair;
-	private RSACipher rsaCipher;
+	private AESFile _aes = new AESFile();
+	private RSAKeyPair _rsaPair;
+	private RSACipher _rsaCipher;
 	
-	private String symmetricPassword = "PXL";
+	private String _symmetricPassword = "PXL";
 	
-	private boolean encryptedFilesExist;
+	private boolean _encryptedFilesExist;
 
 	public Controller(JTextPane tp) {
 		this.log = tp;
@@ -69,23 +70,23 @@ public class Controller {
 	}
 
 	public void generateRSAKeys() throws GeneralSecurityException, IOException {
-		if (encryptedFilesExist) {
+		if (_encryptedFilesExist) {
 			symmetricEncryptedFile.delete();
 			updateLog("Previous encrypted files are now deleted because new keys were generated.");
 		}
-		rsaPair = new RSAKeyPair(2048);
-		generatePrivateRSAKey(rsaPair);
-		generatePublicRSAKey(rsaPair);
+		_rsaPair = new RSAKeyPair(2048);
+		generatePrivateRSAKey(_rsaPair);
+		generatePublicRSAKey(_rsaPair);
 	}
 
 	public void generatePrivateRSAKey(RSAKeyPair pair) throws IOException {
-		RSAPrivateKey = pair.getPrivateKey();
-		rsaPair.toFileSystem("Private_A", "Public_A");
+		_RSAPrivateKey = pair.getPrivateKey();
+		_rsaPair.toFileSystem("Private_A", "Public_A");
 		updateLog("Private RSA key generated.");
 	}
 
 	public void generatePublicRSAKey(RSAKeyPair pair) {
-		RSAPublicKey = pair.getPublicKey();
+		_RSAPublicKey = pair.getPublicKey();
 		updateLog("Public RSA key generated.");
 	}
 
@@ -93,16 +94,16 @@ public class Controller {
 	public void encryptFile(File file) throws StrongEncryptionNotAvailableException, IOException {
 		InputStream input = new FileInputStream(file);
 		OutputStream output = new FileOutputStream(new File("File_1"));
-		aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, symmetricPassword.toCharArray(), input, output);
-		encryptedFilesExist = true;
+		_aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, _symmetricPassword.toCharArray(), input, output);
+		_encryptedFilesExist = true;
 		updateLog("File encrypted with symmetric key.");
 	}
 	
 	public void hashSymmetricEncryptedFile() throws Exception {
 		Path path = Paths.get(symmetricEncryptedFile.getAbsolutePath());
 		byte[] data = Files.readAllBytes(path);
-		hashSymmetricEncryptedFile = Hash.getHash(data);
-		System.out.println("Hash of encrypted file: " + hashSymmetricEncryptedFile);
+		_hashSymmetricEncryptedFile = Hash.getHash(data);
+		System.out.println("Hash of encrypted file: " + _hashSymmetricEncryptedFile);
 		updateLog("Hash of symmetric encrypted file is now created.");
 	}
 
@@ -118,8 +119,8 @@ public class Controller {
 	public void hashOriginalFile(File file) throws Exception {
 		Path path = Paths.get(file.getAbsolutePath());
 		byte[] data = Files.readAllBytes(path);
-		hashOriginalFile = Hash.getHash(data);
-		System.out.println("Hash of original file: " + hashOriginalFile);
+		_hashOriginalFile = Hash.getHash(data);
+		System.out.println("Hash of original file: " + _hashOriginalFile);
 		updateLog("Hash of original file is now created.");
 
 	}
@@ -127,16 +128,20 @@ public class Controller {
 	public void encryptHash() throws IOException, GeneralSecurityException {
 		final String transformation = "RSA/ECB/PKCS1Padding";
 	    final String encoding = "UTF-8";
-		encryptedHash = rsaCipher.encrypt(hashOriginalFile, publicKeyServer, transformation, encoding);
+		_encryptedHash = _rsaCipher.encrypt(_hashOriginalFile, _publicKeyServer, transformation, encoding);
 		updateLog("Hash of the original file is now encrypted.");
 	}
-
+	
+	//maakt de client aan
 	public void sendFile() {
-		/*	
-		 * 
-		 * 
-		 * TODO Send file code.
-		 */
+		Packet filePacket = new Packet(_RSAPublicKey,symmetricEncryptedFile , _encryptedHash, _symmetricPassword);
+		SSL_Client client = new SSL_Client();
+		try {
+			client.createClientSocket(filePacket);
+		} catch (GeneralSecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		playSound("sendFile.wav");
 		updateLog("File sent!");
 	}
