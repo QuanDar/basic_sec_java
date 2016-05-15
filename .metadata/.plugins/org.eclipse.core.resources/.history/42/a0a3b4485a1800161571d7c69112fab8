@@ -1,0 +1,153 @@
+package basic_security.beste_groep.controller;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.security.GeneralSecurityException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.JTextPane;
+
+import basic_security.beste_groep.Hash.Hash;
+import basic_security.beste_groep.encryption.AESFile;
+import basic_security.beste_groep.encryption.AESFile.KeyLength;
+import basic_security.beste_groep.encryption.AESFile.StrongEncryptionNotAvailableException;
+import basic_security.beste_groep.encryption.RSACipher;
+import basic_security.beste_groep.encryption.RSAKeyPair;
+import basic_security.beste_groep.view.TCPClient;
+
+public class Controller {
+
+	private JTextPane log;
+	
+	private String hashOriginalFile;
+	private String hashSymmetricEncryptedFile;
+	
+	private File symmetricEncryptedFile = new File("File_1");
+	
+	private PrivateKey RSAPrivateKey;
+	private PublicKey RSAPublicKey;
+	
+	private AESFile aes = new AESFile();
+	private RSAKeyPair rsaPair;
+	private RSACipher rsaCipher;
+	
+	private String symmetricPassword = "PXL";
+	
+	private boolean encryptedFilesExist;
+
+	public Controller(JTextPane tp) {
+		this.log = tp;
+	}
+
+	public void updateLog(String text) {
+		log.setText(log.getText() + text + "\n");
+	}
+
+	public void generateSymmetricKey(String type) {
+		updateLog("Symmetric " + type + " key generated.");
+	}
+
+	public void generateRSAKeys() throws GeneralSecurityException, IOException {
+		if (encryptedFilesExist) {
+			symmetricEncryptedFile.delete();
+			updateLog("Previous encrypted files are now deleted because new keys were generated.");
+		}
+		rsaPair = new RSAKeyPair(2048);
+		generatePrivateRSAKey(rsaPair);
+		generatePublicRSAKey(rsaPair);
+	}
+
+	public void generatePrivateRSAKey(RSAKeyPair pair) throws IOException {
+		RSAPrivateKey = pair.getPrivateKey();
+		rsaPair.toFileSystem("Private_A", "Public_A");
+		updateLog("Private RSA key generated.");
+	}
+
+	public void generatePublicRSAKey(RSAKeyPair pair) {
+		RSAPublicKey = pair.getPublicKey();
+		updateLog("Public RSA key generated.");
+	}
+
+	//File_1 wordt aangemaakt.
+	public void encryptFile(File file) throws StrongEncryptionNotAvailableException, IOException {
+		InputStream input = new FileInputStream(file);
+		OutputStream output = new FileOutputStream(new File("File_1"));
+		aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, symmetricPassword.toCharArray(), input, output);
+		encryptedFilesExist = true;
+		updateLog("File encrypted with symmetric key.");
+	}
+	
+	public void hashSymmetricEncryptedFile() throws Exception {
+		Path path = Paths.get(symmetricEncryptedFile.getAbsolutePath());
+		byte[] data = Files.readAllBytes(path);
+		hashSymmetricEncryptedFile = Hash.getHash(data);
+		System.out.println("Hash of encrypted file: " + hashSymmetricEncryptedFile);
+		updateLog("Hash of symmetric encrypted file is now created.");
+	}
+
+	public void encryptSymmetricKey() {
+		/*
+		 * 
+		 * 
+		 * TODO Encrypt symmetric key code.
+		 */
+		updateLog("Symmetric key is now encrypted.");
+	}
+
+	public void hashOriginalFile(File file) throws Exception {
+		Path path = Paths.get(file.getAbsolutePath());
+		byte[] data = Files.readAllBytes(path);
+		hashOriginalFile = Hash.getHash(data);
+		System.out.println("Hash of original file: " + hashOriginalFile);
+		updateLog("Hash of original file is now created.");
+
+	}
+
+	public void encryptHash() {
+		/*
+		 * 
+		 * 
+		 * TODO Encrypt hash code.
+		 */
+		updateLog("Hash of the original file is now encrypted.");
+	}
+
+	public void sendFile() {
+		/*
+		 * 
+		 * 
+		 * TODO Send file code.
+		 */
+		playSound("sendFile.wav");
+		updateLog("File sent!");
+	}
+
+	public void playSound(String soundName) {
+		AudioInputStream audioInputStream;
+		URL url = TCPClient.class.getResource("/resources/sendFile.wav");
+		try {
+			audioInputStream = AudioSystem.getAudioInputStream(url);
+			Clip clip = AudioSystem.getClip();
+			clip.open(audioInputStream);
+			clip.start();
+		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+			e.printStackTrace();
+		}
+	}
+}

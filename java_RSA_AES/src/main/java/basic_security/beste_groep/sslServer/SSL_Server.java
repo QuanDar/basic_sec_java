@@ -2,10 +2,13 @@ package basic_security.beste_groep.sslServer;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.GeneralSecurityException;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 
@@ -15,6 +18,8 @@ import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLServerSocket;
 import javax.net.ssl.SSLServerSocketFactory;
 import javax.net.ssl.SSLSocket;
+
+import basic_security.beste_groep.encryption.RSAKeyPair;
 
 /**
  * This class creates an SSL server  
@@ -32,10 +37,14 @@ public class SSL_Server {
 /**
  * This method opens an SSL socket for server use.
  * It listens for any communication to the socket
- * @throws KeyStoreException 
+ * @throws GeneralSecurityException 
  */
-	public void createServerSocket() throws KeyStoreException {
+	public void createServerSocket() throws GeneralSecurityException {
 		try {
+			RSAKeyPair keyPair= new  RSAKeyPair(2048);
+			PublicKey publicKey = keyPair.getPublicKey();
+			PrivateKey privateKey = keyPair.getPrivateKey();
+			
 			/* Source
 			 * http://www.programcreek.com/java-api-examples/javax.net.ssl.KeyManagerFactory
 			 * Socket communication (non SSL)
@@ -83,7 +92,7 @@ public class SSL_Server {
 			SSLSocket _sslSocket = (SSLSocket) sslServersocket.accept();
 			//De supported chiphersuites enabelen voor de socket
 			_sslSocket.setEnabledCipherSuites(socketFactory.getSupportedCipherSuites());
-			new SSLServerThread(_sslSocket).start();
+			new SSLServerThread(_sslSocket, privateKey, publicKey).start();
 			
 			/*	Wikipedia
 			 *	A cipher suite is a collection of symmetric and asymmetric encryption algorithms

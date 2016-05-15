@@ -17,18 +17,15 @@ public class Hash {
 	 * @return een string representatie van het hashed wachtwoord
 	 * @throws Exception Hiermee vangen we de NoSuchAlgorithm mee op
 	 */
-	public String hashedString(String password) throws Exception {
+	public static String getHash(byte[] data) throws Exception {
 		/* De messageDigest is de class binnen java die Hashing voorziet.
 		 * De mogelijke algorithms vinden we terug in Java Crytography achitecture Standard algorithm documentatie.
 		 */
 		//Hier halen we een MessageDigest object op, die het SHA-256 algorithm gebruikt.
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
 		
-		//We zetten het wachtwoord om naar een byte array. Dit is nodig omdat de MessageDigest werkt met bytes en niet met Strings
-		byte[] convertetBytes = password.getBytes("UTF-8");
-		
 		//De update methode zal het object updaten met de gegeven bytes. In dit geval een byte array
-		md.update(convertetBytes);
+		md.update(data);
 		
 		//Met de digest methode voltooien we het hashen. Deze methode geeft een byte array terug		
 		byte[] digestedBytes = md.digest();
