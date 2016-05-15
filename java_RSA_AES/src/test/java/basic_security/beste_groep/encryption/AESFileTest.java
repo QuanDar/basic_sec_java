@@ -1,8 +1,5 @@
 package basic_security.beste_groep.encryption;
 
-import jdk.internal.util.xml.impl.Input;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.output.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,9 +7,6 @@ import org.junit.Test;
 import java.io.*;
 import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
-import java.security.KeyFactory;
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.security.spec.X509EncodedKeySpec;
 
 /**
  * Created by royXD on 11/05/2016.
@@ -26,9 +20,8 @@ public class AESFileTest {
 
     //AES gedeelte
     private AESFile aes;
-    private String passwordString = "pxl";
+    // Het password is de AES key
     private static char[] password;
-    private static char[] wrongPass;
     private static byte[] encryptedMessageBytes;
     private static String myMessage;
 
@@ -37,7 +30,6 @@ public class AESFileTest {
     public void settings(){
         aes = new AESFile();
         password = "pxl".toCharArray();
-        wrongPass = "pxxl".toCharArray();
     }
 
     /**
@@ -56,7 +48,9 @@ public class AESFileTest {
             rsaKeyPair.toFileSystem(privateKeyPathName, publicKeyPathName);
 
             RSACipher rsaCipher = new RSACipher();
+            // Het AES key password encrypteren met AES.
             String encrypted = rsaCipher.encrypt(password.toString(), publicKeyPathName, transformation, encoding);
+            // AES password key decrepteren.
             String decrypted = rsaCipher.decrypt(encrypted, privateKeyPathName, transformation, encoding);
 
             Assert.assertEquals(decrypted, password.toString());
@@ -75,7 +69,9 @@ public class AESFileTest {
             RSAKeyPair rsaKeyPair = new RSAKeyPair(2048);
 
             RSACipher rsaCipher = new RSACipher();
+            // Het AES key password encrypteren met AES.
             String encrypted = rsaCipher.encrypt(password.toString(), rsaKeyPair.getPublicKey(), transformation, encoding);
+            // AES password key decrepteren.
             String decrypted = rsaCipher.decrypt(encrypted, rsaKeyPair.getPrivateKey(), transformation, encoding);
             Assert.assertEquals(decrypted, password.toString());
 
@@ -101,12 +97,15 @@ public class AESFileTest {
         // File fileEncrypted = new File("C:\\Users\\royXD\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\image.jpg.encrypted");
         File fileEncrypted = new File("C:\\Users\\quandar\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\image.jpg.encrypted");
 
+        // Locatie path naar de file
         FileInputStream fis = new FileInputStream(file);
+        // Locatie naar waar de geencrypteerde file wordt geschreven
         FileOutputStream fos = new FileOutputStream(fileEncrypted);
 
         aes.encryptFile(AESFile.KeyLength.TWO_FIFTY_SIX, password, fis, fos);
 
         FileInputStream fisEncrypted = new FileInputStream(fileEncrypted);
+        // Locatie waar de gedecrypteerde file wordt geschreven
         FileOutputStream fosDecrypted = new FileOutputStream("C:\\Users\\quandar\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\decrypted_image.jpg");
 
         aes.decryptFile(password, fisEncrypted, fosDecrypted);
@@ -124,8 +123,12 @@ public class AESFileTest {
     public void testMessageEncryption()
             throws Exception {
 
-        myMessage = "this is a program, hello sir";
+        // Message die geencrypteerd gaat worden met AES.
+        myMessage = "Beste groep PXL";
+        // Message omzetten naar een ByteArrayInputStream.
         InputStream inputMessage = new ByteArrayInputStream(myMessage.getBytes(StandardCharsets.UTF_8));
+        // Geencrypteerde message in de vorm van een Output Byte Array
+        // Deze stap kan eventueel overgeslagen worden en de data direct om te zetten in een array van bytes.
         ByteArrayOutputStream output = (ByteArrayOutputStream) aes.encryptMessage(AESFile.KeyLength.ONE_NINETY_TWO, password, inputMessage);
 
 //        PipedInputStream pin = new PipedInputStream();
@@ -139,8 +142,11 @@ public class AESFileTest {
 //        out.flush();
 //
 //        System.out.println("Text written: " + in.readLine());
+
+        // De message in de vorm van bytes.
         encryptedMessageBytes = output.toByteArray();
 
+        // Decrypteren
         InputStream input = new ByteArrayInputStream(encryptedMessageBytes);
         OutputStream outputDecrypted = aes.decryptMessage(password, input);
 
