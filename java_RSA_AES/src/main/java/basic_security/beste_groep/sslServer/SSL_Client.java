@@ -27,12 +27,16 @@ import javax.net.ssl.TrustManagerFactory;
 
 import basic_security.beste_groep.controller.Packet;
 import basic_security.beste_groep.encryption.RSACipher;
+import basic_security.beste_groep.encryption.RSAKeyPair;
 
 public class SSL_Client {
 	//Socket on which the program comunicates
 	final static int serversocket = 12350; //Deze kunnen we meegeven als parameter
 	final char[] JKS_PASSWORD = "Steven".toCharArray();
-	
+
+	// moet later als parameter worden meegegeven.
+	private char[] password = "pxl".toCharArray();
+
 	//Client side socket + in- and outputstreams
 	private SSLSocket sslsocket = null;
 	private OutputStream sslOS = null;
@@ -90,16 +94,20 @@ public class SSL_Client {
 				
 				
 				//=================================================================
-				RSACipher rsaCipher = new  RSACipher();
-				boolean encrypted = false;
+				RSAKeyPair rsaKeyPair = new RSAKeyPair(2048);
+
+				RSACipher rsaCipher = new RSACipher();
+				String RSAencryptedAESkey = rsaCipher.encrypt(password.toString(), rsaKeyPair.getPublicKey(), transformation, encoding);
+
+				boolean encryptCheck = false;
 				PublicKey serverKey;
-				while (!encrypted) {
+				while (!encryptCheck) {
 					serverKey = (PublicKey) in.readObject();
 					
 					
 					if (serverKey != null){
-						packet.set_encryptedAesKey(rsaCipher.encryptKey(packet.get_encryptedAesKey(), serverKey, transformation, encoding));
-						encrypted = true;
+						packet.set_encryptedAesKey(RSAencryptedAESkey);
+						encryptCheck = true;
 					}
 					
 				}

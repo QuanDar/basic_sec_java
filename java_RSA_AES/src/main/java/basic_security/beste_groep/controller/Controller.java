@@ -33,6 +33,9 @@ import basic_security.beste_groep.sslServer.SSL_Client;
 import basic_security.beste_groep.view.TCPClient;
 
 public class Controller {
+	private final String transformation = "RSA/ECB/PKCS1Padding";
+	private final String encoding = "UTF-8";
+	private char[] password = "pxl".toCharArray();
 
 	private JTextPane log;
 	
@@ -42,6 +45,7 @@ public class Controller {
 	private File symmetricEncryptedFile = new File("File_1");
 	
 	//part of the package
+	private RSAKeyPair rsaKeyPair;
 	private PrivateKey _RSAPrivateKey;
 	private PublicKey _RSAPublicKey;
 	private String _encryptedAesKey;
@@ -51,7 +55,7 @@ public class Controller {
 	
 	private AESFile _aes = new AESFile();
 	private RSAKeyPair _rsaPair;
-	private RSACipher _rsaCipher;
+	private RSACipher _rsaCipher = new RSACipher();
 	
 	private String _symmetricPassword = "PXL";
 	
@@ -74,20 +78,34 @@ public class Controller {
 			symmetricEncryptedFile.delete();
 			updateLog("Previous encrypted files are now deleted because new keys were generated.");
 		}
-		_rsaPair = new RSAKeyPair(2048);
-		generatePrivateRSAKey(_rsaPair);
-		generatePublicRSAKey(_rsaPair);
+		//_rsaPair = new RSAKeyPair(2048);
+		//generatePrivateRSAKey(_rsaPair);
+		//generatePublicRSAKey(_rsaPair);
+
+		rsaKeyPair = new RSAKeyPair(2048);
+
+		RSACipher rsaCipher = new RSACipher();
+
+		//AES key encrypten met RSA.
+		_encryptedAesKey = rsaCipher.encrypt(password.toString(), rsaKeyPair.getPublicKey(), transformation, encoding);
 	}
 
+	// lijkt me een overbodige methode ?
 	public void generatePrivateRSAKey(RSAKeyPair pair) throws IOException {
-		_RSAPrivateKey = pair.getPrivateKey();
+
 		_rsaPair.toFileSystem("Private_A", "Public_A");
 		updateLog("Private RSA key generated.");
+
+
+		_RSAPrivateKey = rsaKeyPair.getPrivateKey();
 	}
 
+	// lijkt me een overbodige methode ?
 	public void generatePublicRSAKey(RSAKeyPair pair) {
-		_RSAPublicKey = pair.getPublicKey();
+
 		updateLog("Public RSA key generated.");
+
+		_RSAPublicKey = rsaKeyPair.getPublicKey();
 	}
 
 	//File_1 wordt aangemaakt.
@@ -124,7 +142,7 @@ public class Controller {
 		updateLog("Hash of original file is now created.");
 
 	}
-	/* De encrypted hash deel 1 paket */
+	/* De encrypted hash deel 1 pakket */
 	public void encryptHash() throws IOException, GeneralSecurityException {
 		final String transformation = "RSA/ECB/PKCS1Padding";
 	    final String encoding = "UTF-8";
