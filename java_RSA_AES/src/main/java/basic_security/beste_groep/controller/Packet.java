@@ -13,15 +13,15 @@ public class Packet implements Serializable{
 	private PublicKey _publicKeyClient;
 	private File _encryptedAesFile;
 	private String _encryptedeHash;
-	private char[] _aesKey;
+	private String _aesKey;
+	private char[] password;
 	
-	
-	public Packet(PublicKey _publicKeyClient, File _encryptedAesFile, String _encryptedeHash, char[] _AesKey) {
+	public Packet(PublicKey _publicKeyClient, File _encryptedAesFile, String _encryptedeHash, char[] password) {
 		super();
 		this._publicKeyClient = _publicKeyClient;
 		this._encryptedAesFile = _encryptedAesFile;
 		this._encryptedeHash = _encryptedeHash;
-		this._aesKey = _AesKey;
+		this.password = password;
 	}
 	
 	
@@ -55,12 +55,12 @@ public class Packet implements Serializable{
 	}
 
 
-	public char[] get_encryptedAesKey() {
+	public String get_encryptedAesKey() {
 		return _aesKey;
 	}
 
 
-	public void set_encryptedAesKey(char[] _encryptedAesKey) {
+	public void set_encryptedAesKey(String _encryptedAesKey) {
 		this._aesKey = _encryptedAesKey;
 	}
 
