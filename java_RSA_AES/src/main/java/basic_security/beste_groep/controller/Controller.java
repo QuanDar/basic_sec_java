@@ -109,7 +109,7 @@ public class Controller {
 
 	//File_1 wordt aangemaakt.
 	public void encryptFile(File fileX) throws StrongEncryptionNotAvailableException, IOException {
-		// for testing
+		// for testing purpose.
 		File file = new File("C:\\Users\\royXD\\Desktop\\105MSDCF\\DSC02418.JPG");
 
 		// File fileEncrypted = new File("C:\\Users\\royXD\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\image.jpg.encrypted");
