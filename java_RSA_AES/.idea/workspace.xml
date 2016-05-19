@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="test klasse kleine aanpassing">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
+    <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" />
     </list>
     <ignored path="groepswerk basic security.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,9 +53,11 @@
       <file leaf-file-name="Packet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="63" column="20" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="20" />
+            <state relative-caret-position="731">
+              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
               <folding>
+                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
                 <element signature="e#1384#1385#0" expanded="true" />
                 <element signature="e#1422#1423#0" expanded="true" />
               </folding>
@@ -79,16 +80,16 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="53" />
+            <state relative-caret-position="561">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2063#2064#0" expanded="true" />
-                <element signature="e#2083#2084#0" expanded="true" />
-                <element signature="e#2122#2123#0" expanded="true" />
-                <element signature="e#2169#2170#0" expanded="true" />
-                <element signature="e#2219#2220#0" expanded="true" />
-                <element signature="e#2276#2277#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2009#2010#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
+                <element signature="e#2095#2096#0" expanded="true" />
+                <element signature="e#2145#2146#0" expanded="true" />
+                <element signature="e#2202#2203#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/test_classes/AESCipher.java" />
         <option value="$PROJECT_DIR$/src/main/java/CryptoUtils/CryptoUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/CryptoUtils/CryptoException.java" />
         <option value="$PROJECT_DIR$/src/test/java/CryptoUtils/CryptoUtilsTest.java" />
@@ -176,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/AESFileTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" />
         <option value="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" />
       </list>
     </option>
@@ -199,9 +200,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1356" />
-    <option name="height" value="1056" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1166,7 +1168,7 @@
       <workItem from="1463064713841" duration="796000" />
       <workItem from="1463341255563" duration="795000" />
       <workItem from="1463647147612" duration="177000" />
-      <workItem from="1463669872207" duration="1325000" />
+      <workItem from="1463669872207" duration="2169000" />
     </task>
     <task id="LOCAL-00001" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
       <created>1462360676732</created>
@@ -1217,7 +1219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462996015522</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Controller keys aangepast">
+      <created>1463671208916</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1463671208916</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1253,10 +1262,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120727000" />
+    <option name="totallyTimeSpent" value="121571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1356" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1267,11 +1276,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40591967" sideWeight="0.50298506" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40591967" sideWeight="0.49701494" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40167364" sideWeight="0.49701494" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23208955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12148438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1305,7 +1314,8 @@
     <MESSAGE value="RSA classes versimpeld" />
     <MESSAGE value="RSA classes aangepast." />
     <MESSAGE value="test klasse kleine aanpassing" />
-    <option name="LAST_COMMIT_MESSAGE" value="test klasse kleine aanpassing" />
+    <MESSAGE value="Controller keys aangepast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller keys aangepast" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1523,17 +1533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="20" />
-          <folding>
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/basic_security/beste_groep/encryption/RSAKeyPairTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1560,18 +1559,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+          <folding>
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="53" />
+        <state relative-caret-position="561">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2122#2123#0" expanded="true" />
-            <element signature="e#2169#2170#0" expanded="true" />
-            <element signature="e#2219#2220#0" expanded="true" />
-            <element signature="e#2276#2277#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2009#2010#0" expanded="true" />
+            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2145#2146#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -46,6 +46,7 @@ public class Controller {
 	
 	//part of the package
 	private RSAKeyPair rsaKeyPair;
+
 	private PrivateKey _RSAPrivateKey;
 	private PublicKey _RSAPublicKey;
 	private String _encryptedAesKey;
@@ -54,11 +55,9 @@ public class Controller {
 	private PublicKey _publicKeyServer;
 	
 	private AESFile _aes = new AESFile();
-	private RSAKeyPair _rsaPair;
 	private RSACipher _rsaCipher = new RSACipher();
 	
-	private String _symmetricPassword = "PXL";
-	
+
 	private boolean _encryptedFilesExist;
 
 	public Controller(JTextPane tp) {
@@ -112,7 +111,7 @@ public class Controller {
 	public void encryptFile(File file) throws StrongEncryptionNotAvailableException, IOException {
 		InputStream input = new FileInputStream(file);
 		OutputStream output = new FileOutputStream(new File("File_1"));
-		_aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, _symmetricPassword.toCharArray(), input, output);
+		_aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, password, input, output);
 		_encryptedFilesExist = true;
 		updateLog("File encrypted with symmetric key.");
 	}
@@ -152,7 +151,7 @@ public class Controller {
 	
 	//maakt de client aan
 	public void sendFile() {
-		Packet filePacket = new Packet(_RSAPublicKey,symmetricEncryptedFile , _encryptedHash, _symmetricPassword);
+		Packet filePacket = new Packet(_RSAPublicKey,symmetricEncryptedFile , _encryptedHash, password);
 		SSL_Client client = new SSL_Client();
 		try {
 			client.createClientSocket(filePacket);
