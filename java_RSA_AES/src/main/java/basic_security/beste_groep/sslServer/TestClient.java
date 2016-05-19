@@ -11,14 +11,14 @@ public class TestClient {
 
 	public static void main(String[] args) {
 		SSL_Client c = new SSL_Client();
-		//try {
-		//	RSAKeyPair keys = new RSAKeyPair(2064);
+		try {
+			RSAKeyPair keys = new RSAKeyPair(2064);
 			
-		//	c.createClientSocket(new Packet(keys.getPublicKey(), new File("File_1"), "Pxl", "pxl".toCharArray()));
-		//} catch (GeneralSecurityException e) {
-		//	// TODO Auto-generated catch block
-		//	e.printStackTrace();
-		//}
+			c.createClientSocket(new Packet(keys.getPublicKey(), new File("File_1"), "Pxl", "pxl".toCharArray()));
+		} catch (GeneralSecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		/*try {
 			c.writeToSocket("Hello world");

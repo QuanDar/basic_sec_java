@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/TestClient.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/TestClient.java" />
     </list>
     <ignored path="groepswerk basic security.iws" />
@@ -42,7 +40,7 @@
       <file leaf-file-name="SSL_Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
+            <state relative-caret-position="1071">
               <caret line="108" column="69" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -114,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/TestClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <caret line="16" column="89" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1196,7 +1194,7 @@
       <workItem from="1463341255563" duration="795000" />
       <workItem from="1463647147612" duration="177000" />
       <workItem from="1463669872207" duration="2809000" />
-      <workItem from="1463672965339" duration="481000" />
+      <workItem from="1463672965339" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
       <created>1462360676732</created>
@@ -1268,7 +1266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1463672714772</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="foutje aangepast">
+      <created>1463673462496</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1463673462496</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1304,7 +1309,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122692000" />
+    <option name="totallyTimeSpent" value="122826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1570,16 +1575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="108" column="69" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1611,10 +1606,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/SSL_Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="108" column="69" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/sslServer/TestClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <caret line="16" column="89" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
