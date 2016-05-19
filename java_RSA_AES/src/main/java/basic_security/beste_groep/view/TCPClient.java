@@ -204,6 +204,7 @@ public class TCPClient {
 	}
 	
 	public void encryptFileButtonAction(ActionEvent arg0) throws Exception {
+
 		con.encryptFile(originalFile);
 		con.encryptSymmetricKey();
 		con.hashOriginalFile(originalFile);

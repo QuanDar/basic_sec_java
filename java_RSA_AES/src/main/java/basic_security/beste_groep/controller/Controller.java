@@ -108,8 +108,18 @@ public class Controller {
 	}
 
 	//File_1 wordt aangemaakt.
-	public void encryptFile(File file) throws StrongEncryptionNotAvailableException, IOException {
-		InputStream input = new FileInputStream(file);
+	public void encryptFile(File fileX) throws StrongEncryptionNotAvailableException, IOException {
+		// for testing
+		File file = new File("C:\\Users\\royXD\\Desktop\\105MSDCF\\DSC02418.JPG");
+
+		// File fileEncrypted = new File("C:\\Users\\royXD\\Google Drive\\0- School\\L 2 PXL\\Basic security\\groepswerk basic security\\src\\main\\java\\basic_security\\beste_groep\\encryption\\image.jpg.encrypted");
+		File fileEncrypted = new File("C:\\Users\\royXD\\Desktop\\105MSDCF\\DSC02418.JPG.encrypted");
+
+		FileInputStream fis = new FileInputStream(file);	//locatie op pc
+		FileOutputStream fos = new FileOutputStream(fileEncrypted); //locatie van opslag
+		// end testing
+
+		InputStream input = new FileInputStream(fileX);
 		OutputStream output = new FileOutputStream(new File("File_1"));
 		_aes.encryptFile(KeyLength.ONE_TWENTY_EIGHT, password, input, output);
 		_encryptedFilesExist = true;
