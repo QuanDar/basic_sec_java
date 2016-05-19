@@ -4,7 +4,6 @@
     <list default="true" id="9b0272ec-bc42-4ae0-85f9-d34e2f3c5d8d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" afterPath="$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Packet.java" />
     </list>
     <ignored path="groepswerk basic security.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +79,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="51" column="35" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="35" />
+            <state relative-caret-position="374">
+              <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1989#1990#0" expanded="true" />
@@ -1168,7 +1167,7 @@
       <workItem from="1463064713841" duration="796000" />
       <workItem from="1463341255563" duration="795000" />
       <workItem from="1463647147612" duration="177000" />
-      <workItem from="1463669872207" duration="2169000" />
+      <workItem from="1463669872207" duration="2791000" />
     </task>
     <task id="LOCAL-00001" summary="RSACipher toegevoegd + HybridCryptoSystemTest">
       <created>1462360676732</created>
@@ -1226,7 +1225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1463671208916</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Controller keys aangepast">
+      <created>1463672046484</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1463672046484</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1262,7 +1268,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121571000" />
+    <option name="totallyTimeSpent" value="122193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
@@ -1574,8 +1580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/basic_security/beste_groep/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="51" column="35" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="35" />
+        <state relative-caret-position="374">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1989#1990#0" expanded="true" />

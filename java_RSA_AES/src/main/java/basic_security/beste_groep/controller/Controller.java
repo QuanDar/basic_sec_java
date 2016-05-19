@@ -92,7 +92,7 @@ public class Controller {
 	// lijkt me een overbodige methode ?
 	public void generatePrivateRSAKey(RSAKeyPair pair) throws IOException {
 
-		_rsaPair.toFileSystem("Private_A", "Public_A");
+		rsaKeyPair.toFileSystem("Private_A", "Public_A");
 		updateLog("Private RSA key generated.");
 
 
